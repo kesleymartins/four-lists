@@ -1,0 +1,27 @@
+<section>
+  <div>
+    <h2>My Lists</h2>
+  </div>
+
+  <div>
+    <%= link_to 'New List', new_list_path, data: { turbo_frame: :new_list_form } %>
+
+    <%= turbo_frame_tag :new_list_form %>
+  </div>
+</section>
+
+<section>
+  <ul>
+  <% @lists.each do |list| %>
+    <li>
+      <%= render 'list', list: list %>
+    </li>
+  <% end %>
+  </ul>
+
+  <% if @lists.exists? %>
+    <%# Paginate %>
+  <% else %>
+    <span>We don't find any list.</span>
+  <% end %>
+</section>
