@@ -11,7 +11,7 @@ class ListsController < ApplicationController
     @list = List.new(list_params)
 
     if @list.save
-      redirect_to lists_path
+      turbo_stream
     else
       render :new, status: :unprocessable_entity
     end
