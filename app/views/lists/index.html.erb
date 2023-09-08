@@ -12,11 +12,11 @@
 
 <section>
   <ul>
-  <% @lists.each do |list| %>
-    <li>
-      <%= render 'list', list: list %>
-    </li>
-  <% end %>
+    <%= turbo_frame_tag :lists do %>
+      <% @lists.each do |list| %>
+        <%= render 'list', list: list %>
+      <% end %>
+    <% end %>
   </ul>
 
   <% if @lists.exists? %>
