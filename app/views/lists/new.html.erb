@@ -1,4 +1,4 @@
-<%= turbo_frame_tag :new_list_form do %>
+<%= turbo_frame_tag dom_id(List.new) do %>
   <section>
     <%= render 'form', list: @list %>
   </section>
