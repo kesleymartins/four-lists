@@ -1,4 +1,6 @@
 class ListsController < ApplicationController
+  before_action :set_list, only: %i[edit update]
+
   def index
     @lists = List.all
   end
@@ -7,6 +9,8 @@ class ListsController < ApplicationController
     @list = List.new
   end
 
+  def edit; end
+
   def create
     @list = List.new(list_params)
 
@@ -14,6 +18,14 @@ class ListsController < ApplicationController
       turbo_stream
     else
       render :new, status: :unprocessable_entity
+    end
+  end
+
+  def update
+    if @list.update(list_params)
+      turbo_stream
+    else
+      render :edit, status: :unprocessable_entity
     end
   end
 
