@@ -1,5 +1,5 @@
 class ListsController < ApplicationController
-  before_action :set_list, only: %i[edit update]
+  before_action :set_list, only: %i[edit update destroy]
 
   def index
     @lists = List.all
@@ -27,6 +27,11 @@ class ListsController < ApplicationController
     else
       render :edit, status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    @list.destroy
+    turbo_stream
   end
 
   private
