@@ -1,4 +1,10 @@
 <%= form_with(model: [list]) do |f| %>
+  <% if list.errors.any? %>
+    <p>
+      <%= list.errors.first.message %>
+    </p
+  <% end %>
+
   <%= f.text_field :name, placeholder: 'Name' %>
   
   <%= f.submit %>
