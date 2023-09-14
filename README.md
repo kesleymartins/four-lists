@@ -1,24 +1,28 @@
-# README
+# Four Lists 
+A application to create and share lists
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### Requirements
+---
+- Ruby
+- Yarn
 
-Things you may want to cover:
+#### Setup Environment 
+---
+```bash
+# Install ruby dependencies
+bundle install
 
-* Ruby version
+# Install node dependencies
+yarn install
 
-* System dependencies
+# Run migrations
+rails db:migrate
+```
 
-* Configuration
+#### Setup Local Server 
+---
+```bash
+./bin/dev
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Application on url: localhost:3000
+```
