@@ -1,0 +1,14 @@
+@use '../abstracts/breakpoints' as bp;
+
+.button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 1px solid black;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: black;
+
+  @media screen and (max-width: bp.$small) {
+    padding: 0.25rem 0.5rem;
+  }
+}
