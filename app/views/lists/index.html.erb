@@ -9,12 +9,12 @@
       data: { turbo_frame: dom_id(List.new) }, 
       class: 'button' 
     %>
-
-    <%= turbo_frame_tag dom_id(List.new) %>
   </div>
 </section>
 
 <section>
+  <%= turbo_frame_tag dom_id(List.new) %>
+
   <ul class="list_index">
     <%= turbo_frame_tag :lists do %>
       <% @lists.each do |list| %>
