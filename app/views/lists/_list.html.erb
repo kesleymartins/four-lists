@@ -1,7 +1,12 @@
 <%= turbo_frame_tag dom_id(list) do %>
-  <li>
-    <span><%= list.name %></span>
-    <span><%= link_to 'Editar', edit_list_path(list) %></span>
-    <span><%= link_to 'Remover', list_path(list), data: { turbo_method: :delete } %>
+  <li class="list__content">
+    <div>
+      <span><%= list.name %></span>
+    </div>
+
+    <div>
+      <span><%= link_to 'Editar', edit_list_path(list) %></span>
+      <span><%= link_to 'Remover', list_path(list), data: { turbo_method: :delete } %>
+    </div>
   </li>
 <% end %>
