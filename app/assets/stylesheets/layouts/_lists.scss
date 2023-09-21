@@ -12,3 +12,26 @@
   }
 }
 
+.list__form {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  .input {
+    display: inline-block;
+    border: 1px solid black;
+    padding: 0.5em;
+    width: 100%;
+    margin-right: 1rem;
+
+    &.invalid {
+      border-color: red;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+

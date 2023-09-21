@@ -1,11 +1,9 @@
-<%= form_with(model: [list]) do |f| %>
-  <% if list.errors.any? %>
-    <p>
-      <%= list.errors.first.message %>
-    </p
-  <% end %>
+<%= form_with(model: [list], class: 'list__form') do |f| %>
+  <%= f.text_field :name, 
+    placeholder: 'Name', 
+    class: "input",
+    autofocus: true
+  %>
 
-  <%= f.text_field :name, placeholder: 'Name' %>
-  
-  <%= f.submit %>
+  <%= f.submit 'Salvar', class: 'button' %>
 <% end %>
