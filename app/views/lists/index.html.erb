@@ -15,7 +15,7 @@
 </section>
 
 <section>
-  <ul class="list">
+  <ul class="list_index">
     <%= turbo_frame_tag :lists do %>
       <% @lists.each do |list| %>
         <%= render 'list', list: list %>

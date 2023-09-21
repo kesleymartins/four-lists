@@ -1,9 +1,6 @@
-.list {
+.list_index {
   padding: 0;
-  white-space: nowrap;
-  position: relative;
-  overflow-x: scroll;
-    margin: 0 0.25%;
+  margin: 0;
 
   .list__content {
     display: flex;
