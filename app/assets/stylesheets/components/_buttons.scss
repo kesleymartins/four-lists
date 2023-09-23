@@ -19,6 +19,14 @@
     }
   }
 
+  &.is-danger {
+    background-color: #ff6b6b;
+    
+    &:hover {
+      background-color: #ee5253;
+    }
+  }
+
   @media screen and (max-width: bp.$small) {
     padding: 0.25rem 0.5rem;
   }
