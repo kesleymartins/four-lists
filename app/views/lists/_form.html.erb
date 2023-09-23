@@ -4,7 +4,9 @@
     class: "input",
     autofocus: true
   %>
-
-  <%= f.submit 'Salvar', class: 'button' %>
-  <%= link_to 'Cancelar', lists_path, class: 'button' %>
+  
+  <div class="actions">
+    <%= f.submit 'Salvar', class: 'button' %>
+    <%= link_to 'Cancelar', lists_path, class: 'button' %>
+  <div>
 <% end %>

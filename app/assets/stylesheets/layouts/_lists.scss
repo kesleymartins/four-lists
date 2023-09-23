@@ -33,5 +33,13 @@
       outline: none;
     }
   }
+
+  .actions {
+    display: flex;
+    
+    * {
+      margin: 0 0.1em;
+    }
+  }
 }
 
