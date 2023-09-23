@@ -7,6 +7,8 @@
   font-family: sans-serif;
   text-decoration: none;
   color: black;
+  cursor: pointer;
+
 
   @media screen and (max-width: bp.$small) {
     padding: 0.25rem 0.5rem;
