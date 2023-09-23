@@ -8,7 +8,16 @@
   text-decoration: none;
   color: black;
   cursor: pointer;
+  
+  &.is-primary {
+    background-color: #1dd1a1;
+    color: black;
 
+    &:hover {
+      background-color: #10ac84;
+      color: white;
+    }
+  }
 
   @media screen and (max-width: bp.$small) {
     padding: 0.25rem 0.5rem;
