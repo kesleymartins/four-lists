@@ -1,9 +1,11 @@
 class ListsController < ApplicationController
-  before_action :set_list, only: %i[edit update destroy]
+  before_action :set_list, only: %i[show edit update destroy]
 
   def index
     @lists = List.all
   end
+
+  def show; end
 
   def new
     @list = List.new
