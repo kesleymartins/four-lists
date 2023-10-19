@@ -1,13 +1,12 @@
-<section class="page-header box">
+<section>
   <div>
-    <h2 class="h2">My Lists</h2>
+    <h2>My Lists</h2>
   </div>
 
   <div>
     <%= link_to 'New List', 
       new_list_path, 
-      data: { turbo_frame: dom_id(List.new) }, 
-      class: 'button' 
+      data: { turbo_frame: dom_id(List.new) }
     %>
   </div>
 </section>
@@ -15,7 +14,7 @@
 <section>
   <%= turbo_frame_tag dom_id(List.new) %>
 
-  <ul class="list_index">
+  <ul> 
     <%= turbo_frame_tag :lists do %>
       <% @lists.each do |list| %>
         <%= render 'list', list: list %>

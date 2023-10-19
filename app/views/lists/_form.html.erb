@@ -1,9 +1,8 @@
-<%= form_with(model: [list], class: 'list__form') do |f| %>
+<%= form_with(model: [list]) do |f| %>
   <%= f.text_field :name, 
     placeholder: 'Name', 
-    class: "input",
     autofocus: true
   %>
 
-  <%= f.submit 'Salvar', class: 'button' %>
+  <%= f.submit 'Salvar' %>
 <% end %>
