@@ -1,11 +1,13 @@
 <header>
-  <div>
-    <%= link_to root_path  do %>
-      <h1>Four Lists</h1>
-    <% end %>
+  <nav class="navbar has-shadow is-primary is-spaced" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand is-flex is-flex-direction-column">
+      <%= link_to root_path, class: 'navbar-item py-1' do %>
+        <h1 class="title">Four Lists</h1>
+      <% end %>
 
-    <small>
-      Crie, Configure e compartilhe suas listas.
-    </small>
-  </div>
+      <small class="navbar-item has-text-black py-0">
+        Crie, Configure e compartilhe suas listas.
+      </small>
+    </div>
+  </nav>
 </header>
